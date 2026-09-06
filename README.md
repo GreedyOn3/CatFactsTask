@@ -1,6 +1,6 @@
 # CatFactsTask
 
-Zadanie rekrutacyjne na rzecz Netwise Sp. z o.o.
+Zadanie rekrutacyjne na rzecz Netwise S.A.
 
 Zadanie wykonałem w postaci aplikacji webowej ASP.NET Core. Napisałem ją głównie w .NET, bez wykorzystania JavaScriptu.
 
@@ -54,22 +54,24 @@ W folderze są odpowiednio tworzone i znajdują się:
 
 ### Strona główna
 
-<img width="1920" height="1040" alt="Strona główna" src="https://github.com/user-attachments/assets/d03702ce-d3d3-4cd6-8017-d1eb60e4c2cc" />
+<img width="1920" height="1040" alt="obraz" src="https://github.com/user-attachments/assets/b74c5577-124f-4bdf-b321-9fa264ea30e6" />
+
 
 ### Menu
 
-<img width="1920" height="1038" alt="Menu" src="https://github.com/user-attachments/assets/a010d6aa-4c5b-4625-9cc3-ea86d63cb878" />
+<img width="1920" height="1037" alt="obraz" src="https://github.com/user-attachments/assets/98ba3346-ce59-4a1b-ae10-e497c6783562" />
+
 
 ### Losowe fakty
 
-<img width="1919" height="1038" alt="Losowy fakt" src="https://github.com/user-attachments/assets/af940f53-246d-4716-91c6-307fe5f35578" />
+<img width="1918" height="1033" alt="obraz" src="https://github.com/user-attachments/assets/a18b6e42-9d34-4544-9313-2adb194c503e" />
 
-<img width="1920" height="1039" alt="obraz" src="https://github.com/user-attachments/assets/cadf351d-9866-494e-a86a-1b5250c5a264" />
-
+<img width="1919" height="1036" alt="obraz" src="https://github.com/user-attachments/assets/1af3233e-1e66-4f37-8e9c-461fe26f5841" />
 
 ### Historia
 
-<img width="1920" height="1042" alt="Historia" src="https://github.com/user-attachments/assets/79ebedaf-b385-4cef-9793-4ae93733d603" />
+<img width="1920" height="1036" alt="obraz" src="https://github.com/user-attachments/assets/a2ff7902-3738-4469-a37d-290591c7af84" />
+
 
 
 
