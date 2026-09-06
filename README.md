@@ -60,9 +60,12 @@ W folderze są odpowiednio tworzone i znajdują się:
 
 <img width="1920" height="1038" alt="Menu" src="https://github.com/user-attachments/assets/a010d6aa-4c5b-4625-9cc3-ea86d63cb878" />
 
-### Losowy fakt
+### Losowe fakty
 
 <img width="1919" height="1038" alt="Losowy fakt" src="https://github.com/user-attachments/assets/af940f53-246d-4716-91c6-307fe5f35578" />
+
+<img width="1920" height="1039" alt="obraz" src="https://github.com/user-attachments/assets/cadf351d-9866-494e-a86a-1b5250c5a264" />
+
 
 ### Historia
 
