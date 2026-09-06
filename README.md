@@ -25,7 +25,7 @@ Aplikacja posiada również kilka dodatkowych funkcjonalności, takich jak:
 
 W celu uruchomienia gotowej aplikacji należy wejść do folderu `app`, uruchomić plik `.exe`, a następnie wejść w przeglądarce na:
 
-`https://localhost:5000`
+`http://localhost:5000`
 
 Drugą możliwością jest pobranie rozwiązania, otwarcie go w Visual Studio i samodzielne zbudowanie oraz uruchomienie aplikacji.
 
