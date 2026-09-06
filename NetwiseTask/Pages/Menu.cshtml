@@ -1,0 +1,102 @@
+﻿@page
+@model MenuModel
+
+@{
+    ViewData["Title"] = "Facts page";
+}
+
+<div class="facts-page py-5">
+
+    <div class="container">
+
+        <h1 class="text-center facts-title mb-5">
+            Poznaj świat kotów!
+        </h1>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card fact-card h-100 shadow">
+
+                    <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg"
+                         class="card-img-top fact-card-image"
+                         alt="Kot" />
+
+                    <div class="card-body text-center d-flex flex-column">
+
+                        <h2 class="fact-card-title">
+                            Poznaj losowy fakt
+                        </h2>
+
+                        <p class="card-text">
+                            Odkryj ciekawy i niesamowity fakt
+                            dotyczący kotów.
+                        </p>
+
+                        <a asp-page="/Fact"
+                           class="btn fact-card-button mt-auto">
+                            Poznaj fakt
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card fact-card h-100 shadow">
+
+                    <img src="https://cdn.pixabay.com/photo/2016/09/05/21/37/cat-1647775_1280.jpg"
+                         class="card-img-top fact-card-image"
+                         alt="Kot" />
+
+                    <div class="card-body text-center d-flex flex-column">
+
+                        <h2 class="fact-card-title">
+                            Ulubione fakty
+                        </h2>
+
+                        <p class="card-text">
+                            Zobacz zapisane przez siebie
+                            najciekawsze fakty o kotach.
+                        </p>
+
+                        <a asp-page="/List" asp-route-type="favorites"
+                           class="btn fact-card-button mt-auto">
+                            Moje ulubione
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card fact-card h-100 shadow">
+
+                    <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg"
+                         class="card-img-top fact-card-image"
+                         alt="Kot" />
+
+                    <div class="card-body text-center d-flex flex-column">
+
+                        <h2 class="fact-card-title">
+                            Znienawidzone fakty
+                        </h2>
+
+                        <p class="card-text">
+                            Sprawdź fakty, które były tak przerażające, że nie chcesz już ich nigdy więcej spotkać.
+                        </p>
+
+                        <a asp-page="/List" asp-route-type="banned"
+                           class="btn fact-card-button mt-auto">
+                            Moje znienawidzone
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

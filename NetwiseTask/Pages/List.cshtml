@@ -1,0 +1,151 @@
+﻿@page
+@model ListModel
+
+@{
+    ViewData["Title"] = Model.ListTitle;
+}
+
+<div class="list-page py-5">
+
+    <div class="container">
+
+        <h1 class="list-title text-center mb-4">
+            @Model.ListTitle
+        </h1>
+
+        <div class="list-switcher mb-4">
+
+            <a asp-page="/List"
+               asp-route-type="history"
+               asp-route-search="@Model.Search"
+               class="list-switcher-button @(Model.ListType == "history" ? "active" : "")">
+
+                <i class="bi bi-clock-history"></i>
+                Historia
+
+            </a>
+
+            <a asp-page="/List"
+               asp-route-type="favorites"
+               asp-route-search="@Model.Search"
+               class="list-switcher-button @(Model.ListType == "favorites" ? "active" : "")">
+
+                <i class="bi bi-heart-fill"></i>
+                Ulubione
+
+            </a>
+
+            <a asp-page="/List"
+               asp-route-type="banned"
+               asp-route-search="@Model.Search"
+               class="list-switcher-button @(Model.ListType == "banned" ? "active" : "")">
+
+                <i class="bi bi-hand-thumbs-down-fill"></i>
+                Znienawidzone
+
+            </a>
+
+        </div>
+
+        <form method="get" class="list-search mb-4">
+
+            <input type="hidden"
+                   name="type"
+                   value="@Model.ListType" />
+
+            <div class="input-group">
+
+                <input type="text"
+                       name="search"
+                       value="@Model.Search"
+                       class="form-control list-search-input"
+                       placeholder="Wyszukaj fakt..." />
+
+                <button type="submit"
+                        class="btn list-search-button">
+
+                    <i class="bi bi-search"></i>
+                    Szukaj
+
+                </button>
+
+            </div>
+
+        </form>
+
+        @if (Model.Facts.Count == 0)
+        {
+            <div class="list-empty">
+
+                <i class="bi bi-search"></i>
+
+                @if (!string.IsNullOrWhiteSpace(Model.Search))
+                {
+                    <h2>Nie znaleziono faktów</h2>
+
+                    <p>
+                        Brak faktów pasujących do:
+                        <strong>@Model.Search</strong>
+                    </p>
+                }
+                else if (Model.ListType == "favorites")
+                {
+                    <h2>Brak ulubionych faktów</h2>
+
+                    <p>
+                        Nie dodałeś jeszcze żadnego faktu do ulubionych.
+                    </p>
+                }
+                else if (Model.ListType == "banned")
+                {
+                    <h2>Brak znienawidzonych faktów</h2>
+
+                    <p>
+                        Nie zbanowałeś jeszcze żadnego faktu.
+                    </p>
+                }
+                else
+                {
+                    <h2>Historia jest pusta</h2>
+
+                    <p>
+                        Nie pobrałeś jeszcze żadnego faktu.
+                    </p>
+                }
+
+            </div>
+        }
+        else
+        {
+            <div class="list-container">
+
+                @foreach (var fact in Model.Facts)
+                {
+                    <a asp-page="/Fact"
+                       asp-route-fact="@fact.Fact"
+                       asp-route-length="@fact.Length"
+                       class="fact-list-item">
+
+                        <div class="fact-list-content">
+
+                            <p class="fact-list-text">
+                                @fact.Fact
+                            </p>
+
+                            <span class="fact-list-length">
+                                @fact.Length znaków
+                            </span>
+
+                        </div>
+
+                        <i class="bi bi-chevron-right fact-list-arrow"></i>
+
+                    </a>
+                }
+
+            </div>
+        }
+
+    </div>
+
+</div>

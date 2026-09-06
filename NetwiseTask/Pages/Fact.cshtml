@@ -1,0 +1,197 @@
+﻿@page
+@model FactModel
+
+@{
+    ViewData["Title"] = "Fact";
+}
+
+<div class="fact-page py-5">
+
+    <div class="container">
+
+        <div class="card fact-card mx-auto shadow-lg">
+
+            @if (Model.CatImage is not null)
+            {
+                <img src="@Model.CatImage.Url"
+                     class="card-img-top fact-image"
+                     alt="Zdjęcie kota" />
+            }
+
+            <div class="card-body p-4 p-md-5">
+
+                <h1 class="fact-title text-center mb-4">
+                    @Model.FactTitle
+                </h1>
+
+                @if (Model.CatFact is not null)
+                {
+                    <div class="language-switcher mb-3">
+
+                        <form method="post"
+                              asp-page-handler="English">
+
+                            <input type="hidden"
+                                   name="fact"
+                                   value="@Model.CatFact.Fact" />
+
+                            <input type="hidden"
+                                   name="length"
+                                   value="@Model.CatFact.Length" />
+
+                            <input type="hidden"
+                                   name="imageUrl"
+                                   value="@Model.CatImage?.Url" />
+
+                            <input type="hidden"
+                                   name="factTitle"
+                                   value="@Model.FactTitle" />
+
+                            <button type="submit"
+                                    class="language-button @(Model.IsPolish == false ? "active" : "")">
+                                EN
+                            </button>
+
+                        </form>
+
+                        <form method="post" asp-page-handler="Translate">
+
+                            <input type="hidden"
+                                   name="fact"
+                                   value="@Model.CatFact.Fact" />
+
+                            <input type="hidden"
+                                   name="length"
+                                   value="@Model.CatFact.Length" />
+
+                            <input type="hidden"
+                                   name="imageUrl"
+                                   value="@Model.CatImage?.Url" />
+
+                            <input type="hidden"
+                                   name="factTitle"
+                                   value="@Model.FactTitle" />
+
+                            <button type="submit"
+                                    class="language-button @(Model.IsPolish ? "active" : "")">
+                                PL
+                            </button>
+
+                        </form>
+
+                    </div>
+                    <div class="fact-content-row">
+
+                        <div class="fact-box">
+
+                            @if (Model.IsPolish && Model.PolishFact is not null)
+                            {
+                                <p class="fact-text mb-0">
+                                    @Model.PolishFact
+                                </p>
+                            }
+                            else
+                            {
+                                <p class="fact-text mb-0">
+                                    @Model.CatFact.Fact
+                                </p>
+                            }
+
+                        </div>
+
+                        <div class="fact-reaction-buttons">
+
+                            <form method="post"
+                                  asp-page-handler="Favorite">
+
+                                <input type="hidden"
+                                       name="fact"
+                                       value="@Model.CatFact.Fact" />
+
+                                <input type="hidden"
+                                       name="length"
+                                       value="@Model.CatFact.Length" />
+
+                                <input type="hidden"
+                                       name="imageUrl"
+                                       value="@Model.CatImage?.Url" />
+
+                                <input type="hidden"
+                                       name="factTitle"
+                                       value="@Model.FactTitle" />
+
+                                <button type="submit"
+                                        class="btn fact-round-button favorite-button @(Model.IsFavorite ? "active" : "")">
+
+                                    <i class="bi @(Model.IsFavorite ? "bi-heart-fill" : "bi-heart")"></i>
+
+                                </button>
+
+                            </form>
+
+
+                            <form method="post"
+                                  asp-page-handler="Banned">
+
+                                <input type="hidden"
+                                       name="fact"
+                                       value="@Model.CatFact.Fact" />
+
+                                <input type="hidden"
+                                       name="length"
+                                       value="@Model.CatFact.Length" />
+
+                                <input type="hidden"
+                                       name="imageUrl"
+                                       value="@Model.CatImage?.Url" />
+
+                                <input type="hidden"
+                                       name="factTitle"
+                                       value="@Model.FactTitle" />
+
+                                <button type="submit"
+                                        class="btn fact-round-button banned-button @(Model.IsBanned ? "active" : "")">
+
+                                    <i class="bi @(Model.IsBanned ? "bi-hand-thumbs-down-fill" : "bi-hand-thumbs-down")"></i>
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <div class="fact-navigation">
+
+                         <a class="btn fact-secondary-button" 
+                            asp-page="/List" 
+                            asp-route-type="history"> 
+                             <i class="bi bi-clock-history"></i>
+                                Historia
+                        </a>
+
+
+
+                        <form method="post"
+                              asp-page-handler="Next">
+
+                            <button type="submit"
+                                    class="btn fact-secondary-button">
+
+                                Następny fakt
+                                <i class="bi bi-shuffle"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

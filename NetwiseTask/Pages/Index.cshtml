@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Cat facts";
+}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="home-page d-flex flex-column">
+
+    <main class="min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6 home-content">
+
+                    <h1 class="display-1 fw-bold mb-4 home-title">
+                        Poznaj fakty o kotach
+                    </h1>
+
+                    <p class="lead mb-4 home-description">
+                        Dzięki tej stronie pogłębisz swoją wiedzę o kotach.
+                        Nie mówimy tutaj o bajkach i mitach, TYLKO O
+                        <strong class="home-highlight">
+                            FAKTYCZNYCH, NIESAMOWITYCH ORAZ NIEMOŻLIWYCH DO UWIERZENIA FAKTACH!!!!!
+                        </strong>
+                        dotyczących kotów :)
+                    </p>
+
+                    <a asp-page="/Menu"
+                       class="btn btn-light btn-lg px-4 py-3 home-button">
+                        Dowiedz się więcej o kotach
+                    </a>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <img src="https://cdn.pixabay.com/photo/2026/04/01/08/45/creativecanvasshop-cat-10203484_1280.png"
+                         alt="Kot"
+                         class="img-fluid rounded-4 shadow-lg home-image" />
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

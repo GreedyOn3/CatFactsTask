@@ -1,0 +1,506 @@
+:root {
+    --color-primary: #2563EB;
+    --color-secondary: #FDE047;
+    --color-white: #FFFFFF;
+    --color-background: #1A46C7;
+    --color-primary-dark: #1D4ED8;
+}
+
+body {
+    background-color: var(--color-background);
+    padding-bottom: 100px;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+.home-page {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+}
+
+.home-title {
+    color: var(--color-secondary);
+}
+
+.home-description {
+    color: var(--color-white);
+    opacity: 0.8;
+}
+
+.home-button {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    font-weight: 600;
+}
+
+    .home-button:hover {
+        color: var(--color-primary-dark);
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+.home-highlight {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.home-image {
+    max-height: 550px;
+    object-fit: cover;
+}
+
+.site-navbar {
+    background-color: var(--color-primary-dark);
+}
+
+    .site-navbar .navbar-brand {
+        color: var(--color-secondary);
+        font-weight: 700;
+    }
+
+        .site-navbar .navbar-brand:hover {
+            color: var(--color-white);
+        }
+
+.site-navbar-title {
+    font-size: 1.5rem;
+}
+
+.site-navbar .nav-link {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+    .site-navbar .nav-link:hover {
+        color: var(--color-secondary);
+    }
+
+    .site-navbar .nav-link.active {
+        color: var(--color-secondary);
+        font-weight: 700;
+    }
+
+.site-navbar .navbar-toggler {
+    border-color: var(--color-white);
+}
+
+    .site-navbar .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem var(--color-secondary);
+    }
+
+.site-footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+    .site-footer p {
+        opacity: 0.8;
+    }
+
+.btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+    .btn-primary:hover {
+        color: var(--color-primary);
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+.facts-page {
+    background-color: var(--color-backgorund);
+}
+
+.facts-title {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.fact-card {
+    max-width: 900px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fact-card-image {
+    height: 220px;
+    object-fit: cover;
+}
+
+.fact-card-title {
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.fact-card .card-text {
+    color: var(--color-white);
+    opacity: 0.85;
+}
+
+.fact-card-button {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    font-weight: 600;
+}
+
+    .fact-card-button:hover {
+        color: var(--color-primary-dark);
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+.fact-page {
+    min-height: calc(100vh - 130px);
+    background-color: var(--color-background);
+}
+
+.fact-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.fact-title {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.fact-content-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.fact-box {
+    flex: 1;
+    background-color: var(--color-primary-dark);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.fact-text {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.fact-reaction-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.fact-round-button {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+    .fact-round-button i {
+        font-size: 1.4rem;
+    }
+
+.favorite-button {
+    color: #dc2626;
+    border: 2px solid #dc2626;
+    background-color: transparent;
+}
+
+    .favorite-button:hover,
+    .favorite-button.active {
+        color: var(--color-white);
+        background-color: #dc2626;
+        border-color: #dc2626;
+    }
+
+.banned-button {
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    background-color: transparent;
+}
+
+    .banned-button:hover,
+    .banned-button.active {
+        color: var(--color-primary-dark);
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+.fact-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.fact-secondary-button {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+    border: 2px solid var(--color-secondary);
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    transition: all 0.2s ease;
+}
+
+    .fact-secondary-button i {
+        margin-right: 0.4rem;
+    }
+
+    .fact-secondary-button:hover {
+        color: var(--color-primary-dark);
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+    .language-switcher form {
+        margin: 0;
+    }
+
+.language-button {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .language-button:hover,
+    .language-button.active {
+        background-color: var(--color-secondary);
+        color: var(--color-primary-dark);
+    }
+
+.list-page {
+    min-height: calc(100vh - 130px);
+    background-color: var(--color-background);
+}
+
+.list-title {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.list-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.list-switcher-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    color: var(--color-white);
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    .list-switcher-button:hover,
+    .list-switcher-button.active {
+        color: var(--color-primary-dark);
+        background-color: var(--color-secondary);
+    }
+
+.list-search {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-search-input {
+    min-height: 48px;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px 0 0 10px;
+    font-size: 1rem;
+}
+
+    .list-search-input:focus {
+        border-color: var(--color-secondary);
+        box-shadow: none;
+    }
+
+.list-search-button {
+    min-width: 120px;
+    color: var(--color-primary-dark);
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    font-weight: 700;
+}
+
+    .list-search-button:hover {
+        color: var(--color-white);
+        background-color: var(--color-primary-dark);
+        border-color: var(--color-secondary);
+    }
+
+.list-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fact-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    .fact-list-item:hover {
+        background-color: var(--color-primary-dark);
+        transform: translateY(-2px);
+    }
+
+.fact-list-content {
+    min-width: 0;
+}
+
+.fact-list-text {
+    margin: 0 0 0.4rem 0;
+    color: var(--color-white);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.fact-list-length {
+    color: var(--color-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.fact-list-arrow {
+    flex-shrink: 0;
+    color: var(--color-secondary);
+    font-size: 1.3rem;
+}
+
+.list-empty {
+    max-width: 700px;
+    margin: 4rem auto 0;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 16px;
+}
+
+    .list-empty i {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--color-secondary);
+        font-size: 3rem;
+    }
+
+    .list-empty h2 {
+        color: var(--color-secondary);
+        font-weight: 700;
+    }
+
+    .list-empty p {
+        margin-bottom: 0;
+        opacity: 0.8;
+    }
+
+@media (max-width: 768px) {
+    .fact-content-row {
+        flex-direction: column;
+    }
+
+    .fact-reaction-buttons {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .fact-navigation {
+        gap: 1rem;
+    }
+
+    .fact-list-item {
+        padding: 1rem;
+    }
+
+    .fact-list-text {
+        font-size: 0.95rem;
+    }
+
+    .list-switcher {
+        gap: 0.5rem;
+    }
+
+    .list-switcher-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .list-search-button {
+        min-width: auto;
+    }
+}

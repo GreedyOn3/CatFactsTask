@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Cat Facts</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NetwiseTask.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    @if (ViewContext.RouteData.Values["page"]?.ToString() != "/Index")
+    {
+        <header>
+            <nav class="navbar navbar-expand-lg site-navbar">
+                <div class="container-fluid px-4">
+
+                    <a class="navbar-brand d-flex align-items-center gap-2"
+                       asp-page="/Menu">
+
+                        <img src="https://cdn.pixabay.com/photo/2026/04/01/08/45/creativecanvasshop-cat-10203484_1280.png"
+                             alt="Kot"
+                             width="50"
+                             height="50"
+                             class="rounded-circle object-fit-cover" />
+
+                        <span class="site-navbar-title">
+                            Cat Facts
+                        </span>
+
+                    </a>
+
+                    <button class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarContent"
+                            aria-controls="navbarContent"
+                            aria-expanded="false"
+                            aria-label="Otwórz menu">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarContent">
+
+                        <ul class="navbar-nav ms-lg-4">
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-page="/Fact">
+                                    Nowy fakt
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-page="/Fact"
+                                   asp-route-type="daily">
+                                    Fakt Dnia
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-page="/List"
+                                   asp-route-type="favorites">
+                                    Ulubione
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-page="/List"
+                                   asp-route-type="banned">
+                                    Znienawidzone
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-page="/List"
+                                   asp-route-type="history">
+                                    Historia
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+    }
+
+
+    <main>
+        @RenderBody()
+    </main>
+
+
+    <footer class="site-footer fixed-bottom">
+        <div class="container text-center py-3">
+
+            <p class="mb-0">
+                © 2026 Aplikacja webowa wykonana przez
+                <span class="home-highlight">Dominika Nowaka</span>
+                na rzecz zadania rekrutacyjnego dla
+                <span class="home-highlight">Netwise Sp. z o.o.</span>
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
